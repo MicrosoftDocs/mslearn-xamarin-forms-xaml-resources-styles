@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TipCalculator.CustomTipPage"
+    Title="Custom Tip">
+
+    <Grid x:Name ="LayoutRoot" Padding="10">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label x:Name="billLabel"  Text="Bill"  FontSize="22" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" />
+        <Label x:Name="tipLabel"   Text="Tip"   FontSize="22" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" />
+        <Label x:Name="totalLabel" Text="Total" FontSize="22" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" />
+
+        <Entry x:Name="billInput"   Placeholder="Enter Amount" Keyboard="Numeric" Grid.Row="0" Grid.Column="1" />
+        <Label x:Name="tipOutput"   Text="0.00" FontSize="22" Grid.Row="1" Grid.Column="1" />
+        <Label x:Name="totalOutput" Text="0.00" FontSize="22" Grid.Row="2" Grid.Column="1" />
+
+        <Grid Grid.Row="3" Padding="10" ColumnSpacing="10" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="End">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Label Text="Tip Percentage" FontSize="Medium" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" />
+            <Label x:Name="tipPercent" Text="15%" HorizontalOptions="End" YAlign="End" FontSize="Medium" Grid.Row="0" Grid.Column="1" />
+            <Slider x:Name="tipPercentSlider" Minimum="0" Maximum="100" Value="15" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
+
+            <Button Text="15%" BorderColor="Accent" BorderWidth="2" BorderRadius="5" Grid.Row="2" Grid.Column="0" Clicked="OnNormalTip" />
+            <Button Text="20%" BorderColor="Accent" BorderWidth="2" BorderRadius="5" Grid.Row="2" Grid.Column="1" Clicked="OnGenerousTip" />
+
+            <Button x:Name="roundDown" Text="Round Down" BorderColor="Accent" BorderWidth="2" BorderRadius="5" Grid.Row="3" Grid.Column="0" />
+            <Button x:Name="roundUp"   Text="Round Up"   BorderColor="Accent" BorderWidth="2" BorderRadius="5" Grid.Row="3" Grid.Column="1" />
+        </Grid>
+    </Grid>
+</ContentPage>
