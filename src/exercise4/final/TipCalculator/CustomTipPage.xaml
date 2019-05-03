@@ -19,7 +19,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Label x:Name="billLabel"  Text="Bill"  FontSize="22" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" />
+        <Label x:Name="billLabel" Text="Bill" Style="{StaticResource infoLabelStyle}" Grid.Row="0" Grid.Column="0" />
         <Label x:Name="tipLabel"   Text="Tip"   FontSize="22" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" />
         <Label x:Name="totalLabel" Text="Total" FontSize="22" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" />
 

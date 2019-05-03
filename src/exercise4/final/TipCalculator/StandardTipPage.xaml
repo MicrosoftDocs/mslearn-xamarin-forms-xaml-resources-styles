@@ -11,10 +11,7 @@
             <Color x:Key="bgColor">#c0c0c0</Color>
             <Color x:Key="fgColor">#606060</Color>
 
-            <Style x:Key="infoLabelStyle" TargetType="Label">
-                <Setter Property="FontSize"       Value="22"   />
-                <Setter Property="FontAttributes" Value="Bold" />
-            </Style>
+            
 
         </ResourceDictionary>
     </Page.Resources>
@@ -41,8 +38,8 @@
 
         <!-- Right column = user input and calculated-value output -->
         <Entry x:Name="billInput"   Placeholder="Enter Amount" Keyboard="Numeric" TextColor="Gray" Grid.Row="0" Grid.Column="1" />
-        <Label x:Name="tipOutput"   Text="0.00" TextColor="{DynamicResource fgColor}" FontSize="22" Grid.Row="1" Grid.Column="1" />
-        <Label x:Name="totalOutput" Text="0.00" TextColor="{DynamicResource fgColor}" FontSize="22" Grid.Row="2" Grid.Column="1" />
+        <Label x:Name="tipOutput"   Text="0.00" TextColor="{DynamicResource fgColor}" Style="{StaticResource baseLabelStyle}" Grid.Row="1" Grid.Column="1" />
+        <Label x:Name="totalOutput" Text="0.00" TextColor="{DynamicResource fgColor}" Style="{StaticResource baseLabelStyle}" Grid.Row="2" Grid.Column="1" />
 
         <!-- Navigate to advanced-view page -->
         <Button Text="Use Custom Calculator" Clicked="GotoCustom" TextColor="Gray" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" />
