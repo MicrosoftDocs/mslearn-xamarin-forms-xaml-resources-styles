@@ -27,24 +27,14 @@ namespace TipCalculator
 
         void OnLight(object sender, EventArgs e)
         {
-            LayoutRoot.BackgroundColor = Color.Silver;
-
-            tipLabel   .TextColor = Color.Navy;
-            billLabel  .TextColor = Color.Navy;
-            totalLabel .TextColor = Color.Navy;
-            tipOutput  .TextColor = Color.Navy;
-            totalOutput.TextColor = Color.Navy;
+            Resources["fgColor"] = Color.FromHex("#606060");
+            Resources["bgColor"] = Color.FromHex("#c0c0c0");
         }
 
         void OnDark(object sender, EventArgs e)
         {
-            LayoutRoot.BackgroundColor = Color.Navy;
-
-            tipLabel   .TextColor = Color.Silver;
-            billLabel  .TextColor = Color.Silver;
-            totalLabel .TextColor = Color.Silver;
-            tipOutput  .TextColor = Color.Silver;
-            totalOutput.TextColor = Color.Silver;
+            Resources["fgColor"] = Color.FromHex("#c0c0c0");
+            Resources["bgColor"] = Color.FromHex("#606060");
         }
 
         void GotoCustom(object sender, EventArgs e)

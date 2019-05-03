@@ -9,7 +9,7 @@ namespace TipCalculator
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new StandardTipPage());
+            MainPage = new NavigationPage(new CustomTipPage());
         }
 
         protected override void OnStart()
