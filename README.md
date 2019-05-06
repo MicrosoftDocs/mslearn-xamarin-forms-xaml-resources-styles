@@ -1,7 +1,6 @@
 # Microsoft Learn: Design consistent XAML pages with shared resources and styles
 
-[//]: # (TODO: Link back to Microsoft Learn module.)
-This project contains the source code for the **Design consistent XAML pages with shared resources and styles** Microsoft Learn module.
+This project contains the source code for the [**Design consistent Xamarin.Forms XAML pages with shared Resources and Styles**](https://docs.microsoft.com/learn/modules/design-consistent-xaml-pages-with-shared-resources-and-styles/) Microsoft Learn module.
 
 # Contributing
 
